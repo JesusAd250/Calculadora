@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculadora Científica</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                text-align: center;
+                margin: 20px;
+            }
+            #display {
+                width: 100%;
+                font-size: 1.5em;
+                text-align: right;
+                margin-bottom: 10px;
+            }
+            table {
+                margin: 0 auto;
+                border-collapse: collapse;
+            }
+            button {
+                width: 60px;
+                height: 60px;
+                font-size: 1.2em;
+                margin: 2px;
+                cursor: pointer;
+            }
+        </style>
+        <script src="/assets/calculadoracientifica.js"></script>
+    </head>
+    <body>
+        <h1>Calculadora Científica</h1>
+        <!-- Cambiado a readonly para permitir modificaciones desde JS -->
+        <input type="text" readonly name="display" id="display">
+        <table name="tabla-botones" id="tabla-botones">
+            <tbody>
+                <!-- Fila 1: Funciones científicas -->
+                <tr>
+                    <td><button onclick="handleButtonClick('Math.sin(')">sin</button></td>
+                    <td><button onclick="handleButtonClick('Math.cos(')">cos</button></td>
+                    <td><button onclick="handleButtonClick('Math.tan(')">tan</button></td>
+                    <td><button onclick="handleButtonClick('Math.log10(')">log</button></td>
+                    <td><button onclick="handleButtonClick('Math.log(')">ln</button></td>
+                </tr>
+                <!-- Fila 2: Potencias y raíces -->
+                <tr>
+                    <td><button onclick="handleButtonClick('**2')">x²</button></td>
+                    <td><button onclick="handleButtonClick('**3')">x³</button></td>
+                    <td><button onclick="handleButtonClick('Math.sqrt(')">√</button></td>
+                    <td><button onclick="handleButtonClick('Math.cbrt(')">∛</button></td>
+                    <td><button onclick="handleButtonClick('**')">^</button></td>
+                </tr>
+                <!-- Fila 3: Números y operaciones básicas -->
+                <tr>
+                    <td><button onclick="handleButtonClick('7')">7</button></td>
+                    <td><button onclick="handleButtonClick('8')">8</button></td>
+                    <td><button onclick="handleButtonClick('9')">9</button></td>
+                    <td><button onclick="handleButtonClick('/')">/</button></td>
+                    <td><button onclick="handleButtonClick('C')">C</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="handleButtonClick('4')">4</button></td>
+                    <td><button onclick="handleButtonClick('5')">5</button></td>
+                    <td><button onclick="handleButtonClick('6')">6</button></td>
+                    <td><button onclick="handleButtonClick('*')">*</button></td>
+                    <td><button onclick="handleButtonClick('(')">(</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="handleButtonClick('1')">1</button></td>
+                    <td><button onclick="handleButtonClick('2')">2</button></td>
+                    <td><button onclick="handleButtonClick('3')">3</button></td>
+                    <td><button onclick="handleButtonClick('-')">-</button></td>
+                    <td><button onclick="handleButtonClick(')')">)</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="handleButtonClick('0')">0</button></td>
+                    <td><button onclick="handleButtonClick('.')">.</button></td>
+                    <td><button onclick="handleButtonClick('Math.PI')">π</button></td>
+                    <td><button onclick="handleButtonClick('+')">+</button></td>
+                    <td><button onclick="handleButtonClick('=')">=</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
